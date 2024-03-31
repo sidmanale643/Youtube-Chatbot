@@ -54,7 +54,7 @@ def init_llm():
   # return llm 
   
 def init_db(splits):
-  embedding_func = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2",
+  embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2",
                                        model_kwargs={'device': 'cpu'})
   Chroma.from_documents(splits , embedding_func ,  persist_directory="./chroma_db5")
 
@@ -66,7 +66,7 @@ def init_chain(llm , db_chroma , prompt):
                                             )
     return qa_chain
 
-def qa_bot():
+def chat_bot():
     embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2",
                                        model_kwargs={'device': 'cpu'})
     db_chroma = Chroma(persist_directory="./chroma_db5", embedding_function= embeddings)
@@ -116,27 +116,27 @@ st.sidebar.subheader("Clear Chat")
 if st.sidebar.button("Reset"):
     st.session_state.messages = []
 
-if prompt1 := st.chat_input():
+if user_prompt := st.chat_input():
     
-        st.session_state.messages.append({"role": "user", "content": prompt1})
-        st.chat_message("user").write(prompt1)
+        st.session_state.messages.append({"role": "user", "content": user_prompt})
+        st.chat_message("user").write(user_prompt)
         with st.spinner("Thinking..."):
-            qa_result = qa_bot()
-            response = qa_result({'query': prompt1})
-            helpful_answer = response['result']
+            qa_result = chat_bot()
+            response = qa_result({'query': user_prompt})
+            bot_answer = response['result']
               
             if 'source_documents' in response and response['source_documentsz ']:
                 document = response['source_documents'][0]
                 metadata = document.metadata
                 file = metadata['source'].split("\\")[-1]
                 source = os.path.splitext(file)[0]
-                assistant_answer = f"{helpful_answer} \n\n Source : {source} Video"
+                assistant_answer = f"{bot_answer} \n\n Source : {source} Video"
             else:
                 source = "Llama"
                 assistant_answer = f"{helpful_answer} \n\n Source : {source} Model"
                 
-            st.session_state.messages.append({"role": "assistant", "content": helpful_answer})
-            st.chat_message("assistant").write(helpful_answer)
+            st.session_state.messages.append({"role": "assistant", "content": bot_answer})
+            st.chat_message("assistant").write(bot_answer)
             
         
         
