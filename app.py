@@ -42,17 +42,16 @@ def split_data(data):
   return splits
 
 def init_llm():
-#   model_name = "google/gemma-2b-it"
-#   model_file = "gemma-2b-it.gguf"
-#   HF_TOKEN = st.secrets["HF_TOKEN"]
-#   model_pth = hf_hub_download(model_name,
-#                                   filename=model_file,
-#                                   local_dir='/content',
-#                                   token= HF_TOKEN)
-#   callback_manager = CallbackManager([StreamingStdOutCallbackHandler()])  
-#   llm = LlamaCpp(model_path = model_pth ,  max_tokens = 2000  , n_gpu_layers = -1 ,callback_manager= callback_manager, verbose=True,)
-  llm = Ollama(model="mistral:latest")
-  return llm 
+  model_name = "google/gemma-2b-it"
+  model_file = "gemma-2b-it.gguf"
+  HF_TOKEN = st.secrets["HF_TOKEN"]
+  model_pth = hf_hub_download(model_name,
+                                  filename=model_file,
+                                  token= HF_TOKEN)
+  callback_manager = CallbackManager([StreamingStdOutCallbackHandler()])  
+  llm = LlamaCpp(model_path = model_pth ,  max_tokens = 2000  , n_gpu_layers = -1 ,callback_manager= callback_manager, verbose=True,)
+  # llm = Ollama(model="mistral:latest")
+  # return llm 
   
 def init_db(splits):
   embedding_func = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2",
