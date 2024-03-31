@@ -133,7 +133,7 @@ if user_prompt := st.chat_input():
                 assistant_answer = f"{bot_answer} \n\n Source : {source} Video"
             else:
                 source = "Llama"
-                assistant_answer = f"{helpful_answer} \n\n Source : {source} Model"
+                assistant_answer = f"{bot_answer} \n\n Source : {source} Model"
                 
             st.session_state.messages.append({"role": "assistant", "content": bot_answer})
             st.chat_message("assistant").write(bot_answer)
