@@ -13,9 +13,9 @@ Welcome to insightBOT, a Streamlit web application that enhances your YouTube ex
 
 ## Technologies Used
 
-- **LangChain**: A natural language processing (NLP) library for text summarization and chatbot interaction.
-- **LLamaCPP**: A library for accessing and analyzing YouTube video data.
-- **OLlama**: Integrates LLamaCPP functionality into web applications.
+- **LangChain**: LangChain is an open-source framework designed to simplify the creation of applications using large language models (LLMs). It provides a standard interface for chains, lots of integrations with other tools, and end-to-end chains for common applications.
+- **LLamaCPP**: The main goal of llama.cpp is to enable LLM inference with minimal setup and state-of-the-art performance on a wide variety of hardware - locally and in the cloud
+- **Ollama**: Ollama allows you to run open-source large language models, such as Llama 2,Mistral locally. It optimizes setup and configuration details, including GPU usage.
 - **Streamlit**: Python library used for building interactive web applications.
 
 ## Getting Started
