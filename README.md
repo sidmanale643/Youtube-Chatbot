@@ -1,12 +1,12 @@
-# insightBOT: Your YouTube Companion
+# SageStream: Your YouTube Companion
 
-Welcome to insightBOT, a Streamlit web application that enhances your YouTube experience by providing video summarization and chatbot interaction functionalities.
+Welcome to SageStream, a Streamlit based web application that enhances your YouTube experience by providing video summarization and chatbot interaction functionalities.
 
 ![insightBOT Logo](link-to-logo)
 
 ## Features
 
-- **Video Summarization**: Paste the URL of any YouTube video, and insightBOT will provide a concise summary of its content, allowing users to gain insights without watching the entire video.
+- **Video Summarization**: Paste the URL of any YouTube video, and SageStream will provide a concise summary of its content, allowing users to gain insights without watching the entire video.
 - **Chatbot Interaction**: Engage in conversations with insightBOT to discuss the video's topic, ask questions, or share opinions.
 - **User-Friendly Interface**: Intuitive and easy-to-use interface designed with Streamlit, ensuring accessibility for users of all technical levels.
 - **Responsive Design**: The web app is responsive and compatible with different screen sizes, providing a seamless experience across devices.
@@ -20,7 +20,7 @@ Welcome to insightBOT, a Streamlit web application that enhances your YouTube ex
 
 ## Getting Started
 
-To run insightBOT locally or deploy it to your preferred hosting platform, follow these steps:
+To run SageStream locally or deploy it to your preferred hosting platform, follow these steps:
 
 1. Clone this GitHub repository to your local machine.
 2. Install the required dependencies by running `pip install -r requirements.txt`.
