@@ -75,8 +75,8 @@ def chat_bot():
     qa = init_chain(llm,  db_chroma  , qa_prompt)
     return qa
   
-st.set_page_config(page_title="InsightBOT : Your YouTube Companion" ,page_icon = "🤖")  
-st.title("InsightBOT 🤖")
+st.set_page_config(page_title="SageStream : Your YouTube Companion" ,page_icon = "🤖")  
+st.title("SageStream 🤖")
 
 st.sidebar.subheader("Youtube URL 🔗")
 
