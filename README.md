@@ -2,12 +2,11 @@
 
 Welcome to SageStream, a Streamlit based web application that enhances your YouTube experience by providing video summarization and chatbot interaction functionalities.
 
-![insightBOT Logo](link-to-logo)
 
 ## Features
 
 - **Video Summarization**: Paste the URL of any YouTube video, and SageStream will provide a concise summary of its content, allowing users to gain insights without watching the entire video.
-- **Chatbot Interaction**: Engage in conversations with insightBOT to discuss the video's topic, ask questions, or share opinions.
+- **Chatbot Interaction**: Engage in conversations with SageStream to discuss the video's topic, ask questions, or share opinions.
 - **User-Friendly Interface**: Intuitive and easy-to-use interface designed with Streamlit, ensuring accessibility for users of all technical levels.
 - **Responsive Design**: The web app is responsive and compatible with different screen sizes, providing a seamless experience across devices.
 
@@ -28,7 +27,7 @@ To run SageStream locally or deploy it to your preferred hosting platform, follo
 
 ## Contribution
 
-Contributions to insightBOT are welcome! If you have any ideas for improvements, new features, or bug fixes, please feel free to open an issue or submit a pull request.
+Contributions to SageStream are welcome! If you have any ideas for improvements, new features, or bug fixes, please feel free to open an issue or submit a pull request.
 
 ## License
 
