@@ -1,4 +1,4 @@
-# SageStream: Your YouTube Companion
+# SageStream: Your Insightful YouTube Navigator
 
 Welcome to SageStream, a Streamlit based web application that enhances your YouTube experience by providing video summarization and chatbot interaction functionalities.
 
