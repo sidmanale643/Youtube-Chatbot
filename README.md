@@ -2,6 +2,7 @@
 
 Welcome to SageStream, a Streamlit based web application that enhances your YouTube experience by providing video summarization and chatbot interaction functionalities.
 
+[Watch the video](https://youtu.be/xSL9TaDuoA4?si=zT8oeGy9g9zM-9u_)
 
 ## Features
 
